@@ -2,6 +2,14 @@
 
 A professional portfolio and resource platform for music production, development, and creative tools.
 
+<img width="850" alt="Screenshot 2024-11-06 at 12 54 37 PM" src="https://github.com/user-attachments/assets/f5eac0bc-0968-4611-bb4e-89ca72a14248">
+
+<img width="826" alt="Screenshot 2024-11-06 at 12 55 01 PM" src="https://github.com/user-attachments/assets/d9776c5c-586a-4e04-9ef2-8351acfe0fe6">
+
+<img width="1049" alt="Screenshot 2024-11-06 at 12 55 26 PM" src="https://github.com/user-attachments/assets/506bdcde-c337-4cb2-9c6b-7bcb2e8bc7a8">
+
+<img width="785" alt="Screenshot 2024-11-06 at 12 55 56 PM" src="https://github.com/user-attachments/assets/6589e144-a945-4c99-b27f-8c85ef7e3b7e">
+
 ## Features
 
 - Music portfolio with streaming integration
