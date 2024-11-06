@@ -1,0 +1,71 @@
+{
+  "images": {
+    "ui": {
+      "logo": {
+        "path": "/assets/images/ui/logo.webp",
+        "sizes": ["64x64", "128x128", "256x256"],
+        "formats": ["webp", "png"]
+      },
+      "icons": {
+        "path": "/assets/images/ui/icons/",
+        "sizes": ["24x24", "32x32"],
+        "formats": ["webp", "svg"]
+      }
+    },
+    "artwork": {
+      "path": "/assets/images/artwork/",
+      "sizes": ["1200x1200"],
+      "formats": ["webp", "jpg"]
+    },
+    "photos": {
+      "path": "/assets/images/photos/",
+      "sizes": ["1200x1200"],
+      "formats": ["webp", "jpg"]
+    }
+  },
+  "audio": {
+    "music": {
+      "path": "/assets/audio/music/",
+      "formats": ["mp3"],
+      "bitrate": "320kbps",
+      "metadata": true
+    },
+    "previews": {
+      "path": "/assets/audio/previews/",
+      "formats": ["mp3"],
+      "bitrate": "192kbps",
+      "duration": "30s"
+    },
+    "samples": {
+      "path": "/assets/audio/samples/",
+      "formats": ["wav"],
+      "sampleRate": "44.1kHz"
+    }
+  },
+  "videos": {
+    "demos": {
+      "path": "/assets/videos/demos/",
+      "formats": ["mp4"],
+      "resolution": "1080p",
+      "codec": "h264"
+    },
+    "tutorials": {
+      "path": "/assets/videos/tutorials/",
+      "formats": ["mp4"],
+      "resolution": "1080p",
+      "codec": "h264"
+    }
+  },
+  "fonts": {
+    "primary": {
+      "path": "/assets/fonts/primary/",
+      "formats": ["woff2", "woff"],
+      "weights": [400, 500, 600, 700]
+    },
+    "secondary": {
+      "path": "/assets/fonts/secondary/",
+      "formats": ["woff2", "woff"],
+      "weights": [400, 600]
+    }
+  }
+}
