@@ -1,10 +1,15 @@
 import fs from 'fs/promises';
 import path from 'path';
 import matter from 'gray-matter';
-import { marked } from 'marked';
+import { remark } from 'remark';
+import html from 'remark-html';
 import { BlogPost } from './types/blog';
 
 const POSTS_DIRECTORY = path.join(process.cwd(), 'content/blog/posts');
+
+interface FileSystemError extends Error {
+  code?: string;
+}
 
 export async function getAllPosts(): Promise<BlogPost[]> {
   try {
@@ -34,6 +39,12 @@ export async function getPostBySlug(slug: string): Promise<BlogPost> {
     const fileContent = await fs.readFile(filePath, 'utf8');
     const { data, content } = matter(fileContent);
 
+    // Convert markdown to HTML using remark
+    const processedContent = await remark()
+      .use(html)
+      .process(content);
+    const contentHtml = processedContent.toString();
+
     if (!data.title || !data.date) {
       throw new Error(`Invalid frontmatter in post: ${slug}`);
     }
@@ -42,7 +53,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost> {
       slug,
       title: data.title,
       excerpt: data.excerpt || '',
-      content: marked(content),
+      content: contentHtml,
       date: data.date,
       author: data.author || 'Mitchell Cohen',
       category: data.category || 'Uncategorized',
@@ -52,9 +63,13 @@ export async function getPostBySlug(slug: string): Promise<BlogPost> {
     };
 
     return post;
-  } catch (error) {
-    if (error.code === 'ENOENT') {
-      throw new Error(`Post not found: ${slug}`);
+  } catch (error: unknown) {
+    // Type guard for FileSystemError
+    if (error instanceof Error) {
+      const fsError = error as FileSystemError;
+      if (fsError.code === 'ENOENT') {
+        throw new Error(`Post not found: ${slug}`);
+      }
     }
     throw error;
   }

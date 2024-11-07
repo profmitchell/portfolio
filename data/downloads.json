@@ -1,3 +1,79 @@
 {
-  "variance": 1
+  "plugins": {
+    "items": [
+      {
+        "id": "variance-synth",
+        "title": "Variance Synth",
+        "description": "Free synthesizer plugin with modular routing",
+        "version": "1.0.0",
+        "category": "Instruments",
+        "downloadUrl": "https://drive.google.com/file/d/1234example5678/view?usp=sharing",
+        "previewUrl": "https://drive.google.com/file/d/1234example5678/preview",
+        "imageUrl": "/images/placeholder.jpg",
+        "features": [
+          "3 oscillators",
+          "Modular routing",
+          "Built-in effects",
+          "Custom presets"
+        ]
+      }
+    ]
+  },
+  "templates": {
+    "items": [
+      {
+        "id": "future-bass",
+        "title": "Future Bass Template",
+        "description": "Professional Future Bass production template",
+        "category": "Templates",
+        "downloadUrl": "https://drive.google.com/file/d/5678example1234/view?usp=sharing",
+        "previewUrl": "https://drive.google.com/file/d/5678example1234/preview",
+        "imageUrl": "/images/placeholder.jpg",
+        "features": [
+          "Project structure",
+          "Mixing chain",
+          "Sample organization",
+          "Processing examples"
+        ]
+      }
+    ]
+  },
+  "samples": {
+    "items": [
+      {
+        "id": "lofi-essentials",
+        "title": "Lo-Fi Essentials",
+        "description": "Essential sample pack for Lo-Fi production",
+        "category": "Samples",
+        "downloadUrl": "https://drive.google.com/file/d/9012example3456/view?usp=sharing",
+        "previewUrl": "https://drive.google.com/file/d/9012example3456/preview",
+        "imageUrl": "/images/placeholder.jpg",
+        "features": [
+          "Drum samples",
+          "Vinyl textures",
+          "Piano loops",
+          "Ambient sounds"
+        ]
+      }
+    ]
+  },
+  "presets": {
+    "items": [
+      {
+        "id": "synthwave-serum",
+        "title": "Synthwave Serum Presets",
+        "description": "Retro-inspired Serum preset collection",
+        "category": "Presets",
+        "downloadUrl": "https://drive.google.com/file/d/3456example9012/view?usp=sharing",
+        "previewUrl": "https://drive.google.com/file/d/3456example9012/preview",
+        "imageUrl": "/images/placeholder.jpg",
+        "features": [
+          "80s inspired sounds",
+          "Analog emulations",
+          "Bass presets",
+          "Lead presets"
+        ]
+      }
+    ]
+  }
 }
