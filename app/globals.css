@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+
+  [data-theme="sand"] {
+    --background: 48 38 28;
+    --foreground: 28 25 23;
+    --card: 44 34 24;
+    --card-foreground: 28 25 23;
+    --popover: 44 34 24;
+    --popover-foreground: 28 25 23;
+    --primary: 168 162 158;
+    --primary-foreground: 28 25 23;
+    --secondary: 54 44 34;
+    --secondary-foreground: 248 245 243;
+    --muted: 54 44 34;
+    --muted-foreground: 138 132 128;
+    --accent: 54 44 34;
+    --accent-foreground: 248 245 243;
+    --destructive: 220 38 38;
+    --destructive-foreground: 248 245 243;
+    --border: 54 44 34;
+    --input: 54 44 34;
+    --ring: 168 162 158;
+  }
+
+  [data-theme="mahogany"] {
+    --background: 58 28 28;
+    --foreground: 248 245 243;
+    --card: 64 34 34;
+    --card-foreground: 248 245 243;
+    --popover: 64 34 34;
+    --popover-foreground: 248 245 243;
+    --primary: 188 82 82;
+    --primary-foreground: 248 245 243;
+    --secondary: 74 44 44;
+    --secondary-foreground: 248 245 243;
+    --muted: 74 44 44;
+    --muted-foreground: 158 132 132;
+    --accent: 74 44 44;
+    --accent-foreground: 248 245 243;
+    --destructive: 220 38 38;
+    --destructive-foreground: 248 245 243;
+    --border: 74 44 44;
+    --input: 74 44 44;
+    --ring: 188 82 82;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Enhanced Animations */
+@layer utilities {
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary/25;
+  }
+}
+
+/* Enhanced Shadows */
+.shadow-enhanced {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 
+              0 2px 4px -2px rgb(0 0 0 / 0.1),
+              0 8px 24px -4px rgb(0 0 0 / 0.1);
+}
+
+.shadow-enhanced-lg {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+              0 4px 6px -4px rgb(0 0 0 / 0.1),
+              0 16px 40px -8px rgb(0 0 0 / 0.1);
+}
